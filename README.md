@@ -68,17 +68,18 @@ Notes for future competitions (not part of write-up).
 
 ## Improvements
 
-- Should have figured out which areas of the WSI images were informative earlier in the competition. Since most of the test set images are TMAs, training on more tumorous tissue should theoretically lead to better model weights.
+- Should have looked at using image previews for external data! There were many external TMA datasets that could have been used by cropping from these previews. See [12th place solution](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465455).
 
-- Should have done model error analysis/denoising earlier. Only explored mislabelled/noisy images in the last couple weeks of the competition, and made large gains by simply dropping ~5% and relabelling 8 images. Did explore other dropping methods.
+- Could have created `Other` class from the `stroma/necrosis` areas of the segmentation masks. This was used in the [10th](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465415) and [8th](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465382) place solutions.
 
-- Should have implemented an ensemble with images of multiple magnifications (40x, 20x, 10x, ...). Seems this is SOTA.
+- Seems alot of top solutions used larger tile size on WSIs, or multiple magnifications. See [15th place solution](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465358).
 
-TODO: More to come based on other write-ups
+- Should have done model error analysis/denoising earlier. Only explored mislabelled/noisy images in the last couple weeks of the competition, and made large gains by simply dropping ~5% and relabelling 8 images. Did not explore other dropping methods.
+
+- Should have trusted frozen`StainNet` attached to MIL model! This seemed to help generalize to unseen staining methods.
 
 **Positives**
 
 - Team-up. Learned a lot from Kevin. He introduced me to Einops and we had good discussions when brainstorming new ideas and solving problems.
-- Postprocessing tricks. Understanding the nature of balanced accuracy helped us gain performance by overweighting underrepresented classes.
 - Modeling. Implemented MIL (Multiple instance learning) models, added HAM (High attention masking), and added heavy augmentations which all helped generalizability.
 - Fast inference. Used lightweight backbones, FP16 and DDP. This helped ensemble many models, and maximi
