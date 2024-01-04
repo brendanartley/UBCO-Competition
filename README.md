@@ -68,7 +68,7 @@ Notes for future competitions (not part of write-up).
 
 ## Improvements
 
-- Should have looked at using image previews for external data! There were many external TMA datasets that could have been used by cropping from these previews. See [12th place solution](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465455).
+- Should have looked at using image previews for external data! There were many external TMA datasets that could have been used by cropping from these previews. See [12th place solution](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465455). One really good source was [tissuearray\[.\]com](https://www.tissuearray.com/tissue-arrays/Ovary), which I found but clicked away before looking at the previews!
 
 - Could have created `Other` class from the `stroma/necrosis` areas of the segmentation masks. This was used in the [10th](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465415) and [8th](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465382) place solutions.
 
