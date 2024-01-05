@@ -70,9 +70,11 @@ Notes for future competitions (not part of write-up).
 
 - Should have looked at using image previews for external data! There were many external TMA datasets that could have been used by cropping from these previews. See [12th place solution](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465455). One really good source was [tissuearray\[.\]com](https://www.tissuearray.com/tissue-arrays/Ovary), which I found but clicked away before looking at the previews!
 
-- Could have created `Other` class from the `stroma/necrosis` areas of the segmentation masks. This was used in the [10th](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465415) and [8th](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465382) place solutions.
+- Should have looked at backbones pretrained on histopathological images. This would have given stronger starting weights. See [7th](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465697) and [6th](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465379) solution.
 
-- Seems alot of top solutions used larger tile size on WSIs, or multiple magnifications. See [15th place solution](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465358).
+- Should have explored `Other` class more. Could have created `Other` class from the `stroma/necrosis` areas of the segmentation masks. This was used in the [10th](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465415) and [8th](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465382) place solutions.
+
+- Seems alot of top solutions used more tiles on WSIs, or used multiple magnifications. See [15th place solution](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465358) and [7th Place solution](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465697).
 
 - Should have done model error analysis/denoising earlier. Only explored mislabelled/noisy images in the last couple weeks of the competition, and made large gains by simply dropping ~5% and relabelling 8 images. Did not explore other dropping methods.
 
