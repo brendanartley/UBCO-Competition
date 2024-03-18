@@ -1,7 +1,7 @@
 
 ## 20th Place Solution
 
-Our solution for the [UBC-Ocean Competition](https://www.kaggle.com/competitions/UBC-OCEAN) is based on a multiple instance learning (MIL) architecture with attention pooling. We use an ensemble of `efficientnet_b2`, `tf_efficientnetv2_b2.in1k` and `regnety_016.tv2_in1k` backbones trained on sequences of 8 x 1280 x 1280 images, and ignore the `other` class. We also apply light TTA during inference (rot90, flips, transpose, random image order).
+Our solution for the [UBC-Ocean Competition](https://www.kaggle.com/competitions/UBC-OCEAN) is based on a multiple instance learning (MIL) architecture with attention pooling. We use an ensemble of `efficientnet_b2`, `tf_efficientnetv2_b2.in1k` and `regnety_016.tv2_in1k` backbones trained on sequences of 8 x 1280 x 1280 images, and ignore the `other` class. We also apply light TTA during inference (rot90, flips, transpose, random image order). The Kaggle write-up can be found [here](https://www.kaggle.com/competitions/UBC-OCEAN/discussion/465356).
 
 <h1 align="center">
 <img src="./imgs/architecture.jpg" alt="Model Architecture" width="800">
